@@ -28,7 +28,7 @@ $(window).scroll(function(){
         $(".mynavbar__links--1").css('margin-bottom', '3rem');
         $(".mynavbar__links--1").css('margin-top', '3rem');
 
-        $(".mainheader").css('background-image', 'url(fondo1.jpg)');
+        $(".mainheader").css('background-image', 'url(bg-color.jpg)');
     }
         
     

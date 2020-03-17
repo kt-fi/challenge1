@@ -85,8 +85,8 @@ a {
 
 .mainheader {
   height: 150vh;
-  background-image: url(/img/fondo1.jpg);
-  background-position: top;
+  background-image: url(/img/bg-color.jpg);
+  background-position: center;
   background-size: cover;
   transition: all 1s;
   text-align: center; }
