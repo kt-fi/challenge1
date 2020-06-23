@@ -39,7 +39,7 @@ let i = 1;
                  }
             },
 
-            clearBoard: function(){
+            clearBoard: function(newCard, questions){
                 let n;
                 for(n = 1; n < 6
                     ; n++){
@@ -48,6 +48,7 @@ let i = 1;
                     document.querySelector(`.w${n}`).classList.remove('incorrect')
                     i=1;
                 }
+                questions.splice([newCard], [newCard])
             }    
 
     }
@@ -103,6 +104,8 @@ let i = 1;
  
  // BUTTONS
 
+ let timerActive = 0;
+
  (eventListeners = () => {
     document.querySelector(".btn-start").addEventListener('click', initialise);
     document.querySelector(".btn__next").addEventListener('click', function(){
@@ -111,7 +114,17 @@ let i = 1;
     })
     document.querySelector(".btn__correct").addEventListener('click', UICtrl.correct)
     document.querySelector(".btn__pass").addEventListener('click', UICtrl.incorrect)
-    document.querySelector(".timer__start").addEventListener('click', timer)
+
+    
+         document.querySelector(".timer__start").addEventListener('click', function(){
+             if(timerActive === 0){
+                 timer();
+                 timerActive = 1;
+                    }
+         })
+         
+ 
+   
  })
 
 
@@ -132,13 +145,13 @@ let i = 1;
             const newCard = selectCard();
             
             UICtrl.getCard(newCard, dataCtrl.getQuestions)
-            UICtrl.clearBoard();
+            UICtrl.clearBoard(newCard, dataCtrl.getQuestions);
             
             
         }
            
             selectCard = () => {
-                return Math.floor(Math.random()*11);      
+                return Math.floor(Math.random()*dataCtrl.getQuestions.length);      
          }
 
 
@@ -147,22 +160,23 @@ let i = 1;
     let seconds = 0;
     let mins = 2;
     let countdown;
+    
          function timer(){
 
             if(mins >= 0){
-countdown =  setTimeout(function(){
-                 if(seconds < 10 && seconds > 0){
-                      document.querySelector(".seconds").textContent = '0' + seconds
-                    seconds--;  
-                 }else if(seconds >=10 && seconds < 61){
-                    document.querySelector(".seconds").textContent =  seconds
-                    seconds--;  
-                 }else if(seconds <= 0){
-                     mins--;
-                     seconds = 59;
-                     document.querySelector(".seconds").textContent =  seconds
-                     document.querySelector(".mins").textContent = '0' + mins
-                 }
+                countdown =  setTimeout(function(){
+                                if(seconds < 10 && seconds > 0){
+                                    document.querySelector(".seconds").textContent = '0' + seconds
+                                    seconds--;  
+                                }else if(seconds >=10 && seconds < 61){
+                                    document.querySelector(".seconds").textContent =  seconds
+                                    seconds--;  
+                                }else if(seconds <= 0){
+                                    mins--;
+                                    seconds = 59;
+                                    document.querySelector(".seconds").textContent =  seconds
+                                    document.querySelector(".mins").textContent = '0' + mins
+                                }
                  
                
                 console.log(seconds)
@@ -181,6 +195,7 @@ countdown =  setTimeout(function(){
             document.querySelector(".seconds").textContent = '00'
             document.querySelector(".mins").textContent = '02'
             clearTimeout(countdown)
+            timerActive = 0;
          }
          
 
