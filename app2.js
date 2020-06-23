@@ -48,7 +48,8 @@ let i = 1;
                     document.querySelector(`.w${n}`).classList.remove('incorrect')
                     i=1;
                 }
-                questions.splice([newCard], [newCard])
+                questions.splice([newCard], 1)
+                console.log(newCard,questions)
             }    
 
     }
@@ -71,7 +72,7 @@ let i = 1;
      this.used = used;
  }
  
- var q1 = new Question( 'Describing People', ["In his mid-Twenties", "Bald", "Beard", "Overweight", "grey Hair", "Fringe"]);
+ var q1 = new Question( 'Describing People', ["In his mid-Twenties", "Bald", "Beard", "Overweight", "Grey Hair", "Fringe"]);
  var q2 = new Question( 'Personality', ["Selfish", "Bossy", "Moody", "Impatient", "Spoilt", "Shy"]);
  var q3 = new Question( 'Cinema', ["Horror Film", "Soundtrack", "Cast", "Dubbed", "Sequel", "Plot"]);
  var q4 = new Question( 'Education', ["State School", "Pupil", "Time Table", "Subject", "Professor", "Fail an Exam"]);
@@ -81,7 +82,7 @@ let i = 1;
  var q8 = new Question( 'Sport', ["Referee", "Coach", "Tennis Court", "Beat", "Draw", "Warm Up"]);
  var q9 = new Question( 'Travel and Transport', ["Flight", "Railway Staton", "Luggage", "Lorry", "Seat Belt", "Traffic Jam,"]);
  var q10 = new Question( 'Phrasal Verbs', ["Check In", "Turn Down (Volume)", "Call Back", "Give Up", "Throw Away", "Take Off"]);
- var q11 = new Question( 'Money', ["Waste", "Inherit", "Loan", "Note", "Professor", "Fail an Exam"]);
+ var q11 = new Question( 'Money', ["Waste", "Inherit", "Loan", "Note", "Tax", "Borrow"]);
  
  
  
@@ -146,7 +147,7 @@ let i = 1;
             
             UICtrl.getCard(newCard, dataCtrl.getQuestions)
             UICtrl.clearBoard(newCard, dataCtrl.getQuestions);
-            
+            UICtrl.getWord()
             
         }
            
