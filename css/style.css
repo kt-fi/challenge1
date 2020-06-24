@@ -39,6 +39,7 @@ html {
   border-radius: 5px;
   color: white;
   font-size: 5rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   box-shadow: 1px 1px 1px black;
   grid-column: 2 / 7;
@@ -50,8 +51,12 @@ html {
   @media only screen and (max-height: 700px) {
     .btn-start {
       height: 120%;
-      font-size: 1.5rem;
-      font-weight: 200; } }
+      font-size: 2rem;
+      font-weight: 700; } }
+
+.version {
+  color: white;
+  font-size: 10px; }
 
 .copyright {
   grid-row: 6 / 7;
@@ -60,7 +65,8 @@ html {
   align-self: center;
   text-align: center;
   color: white;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   margin-bottom: 2rem; }
 
 .game {
