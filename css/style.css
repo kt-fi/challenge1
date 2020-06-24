@@ -20,13 +20,15 @@ html {
 
 .header {
   font-family: "Montserrat", sans-serif;
-  color: #d4d4d4;
+  color: #fcbf1e;
   font-size: 8rem;
   padding-top: 3rem;
   grid-column: 1 / -1;
   align-self: center;
   justify-self: center;
   text-align: center; }
+  .header__logo {
+    color: white; }
 
 .btn-start {
   height: 50%;
@@ -80,18 +82,17 @@ html {
     align-self: center;
     transform: translateY(2rem);
     font-size: 6rem;
-    color: #d4d4d4;
+    color: #fcbf1e;
     font-family: "Montserrat", sans-serif; }
 
 .timer__start {
   height: 30%;
-  width: 10rem;
-  grid-column: 2 / 7;
+  grid-column: 4 / 5;
   grid-row: 2 / 3;
-  transform: translateY(2rem);
+  transform: translateY(1rem);
   justify-self: center;
-  background-color: #fcfc6f;
-  color: #414141; }
+  color: #fcfc6f;
+  font-size: 5rem; }
 
 .game--start {
   animation: fadeInGame;
@@ -105,7 +106,7 @@ html {
     opacity: 1; } }
 
 .card {
-  background-color: #d4d4d4;
+  background-color: #40bad5;
   margin: 2px;
   border-radius: 3px;
   grid-column: 2 / 7;
@@ -137,21 +138,21 @@ html {
   border-radius: 5px;
   box-shadow: 1px 1px 1px black; }
   .btn__correct {
-    background-color: green;
+    color: #74fd74;
+    font-size: 6rem;
     height: 50%;
     grid-column: 1 / 4;
     grid-row: 7 / 8;
-    margin-left: 2rem;
-    margin-right: 1rem;
+    justify-self: center;
     align-self: center;
     transform: translateY(-2rem); }
   .btn__pass {
-    background-color: #ff4747;
+    color: #ff7474;
     height: 50%;
+    font-size: 6rem;
     grid-column: 5 / 8;
     grid-row: 7 / 8;
-    margin-right: 2rem;
-    margin-left: 1rem;
+    justify-self: center;
     align-self: center;
     transform: translateY(-2rem); }
   .btn__next {
