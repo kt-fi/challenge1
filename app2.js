@@ -212,6 +212,6 @@ let i = 1;
  
  // Start **********************************************************************
 
- screen.lockOrientation("portrait")
+
  eventListeners();
  
