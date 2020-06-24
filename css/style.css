@@ -16,7 +16,7 @@ html {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  background-color: #2e279d; }
+  background-color: #120136; }
 
 .header {
   font-family: "Montserrat", sans-serif;
@@ -67,7 +67,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #2e279d;
+  background-color: #120136;
   opacity: 0;
   height: 100vh;
   width: 100vw;
@@ -106,23 +106,34 @@ html {
     opacity: 1; } }
 
 .card {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
   background-color: #40bad5;
+  box-shadow: 2px 2px 2px #838383;
   margin: 2px;
-  border-radius: 3px;
+  border-radius: 6px;
   grid-column: 2 / 7;
   grid-row: 3 / 7;
   transform: translateY(-2rem); }
   .card__header {
+    grid-row: 1 / 4;
+    margin: 4px;
+    width: 95%;
     font-size: 4rem;
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    padding-top: 2rem; }
+    color: white;
+    justify-self: center;
+    align-self: center; }
   .card__answers {
-    margin-top: 2rem;
+    grid-row: 4 / 10;
+    margin: 4px;
+    padding-bottom: 1rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 3.5rem;
-    text-align: center; }
+    line-height: 4rem;
+    text-align: center;
+    background-color: #87d0e0; }
 
 .currentWord {
   background-color: #fdfd7d; }
